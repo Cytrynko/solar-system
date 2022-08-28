@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="index.css" rel="stylesheet" />
+    <title>Solar System</title>
+  </head>
+  <body>
+    <!-- planet-list --> 
+    <div class="planet-list">
+      <div class="planet-images">
+        <img src="img/neptune.png" class="planet-neptun-image" id="neptunbtn" />
+        <img src="img/uranus.png" class="planet-uranus-image" id="uranusbtn" />
+        <img src="img/saturn.png" class="planet-saturn-image" id="saturnbtn" />
+        <img src="img/jupiter.png" class="planet-jupiter-image" id="jupiterbtn" />
+        <img src="img/mars.png" class="planet-mars-image" id="marsbtn" />
+        <img src="img/earth.png" class="planet-earth-image" id="earthbtn" />
+        <img src="img/venus.png" class="planet-venus-image" id="venusbtn" />
+        <img src="img/mercury.png" class="planet-mercury-image" id="mercurybtn" />
+      </div>
+
+      <audio src="sounds/neptune.mp3" id="neptunesound"></audio>
+      <audio src="sounds/uranus.mp3" id="uranussound"></audio>
+      <audio src="sounds/saturn.mp3" id="saturnsound"></audio>
+      <audio src="sounds/jupiter.mp3" id="jupitersound"></audio>
+      <audio src="sounds/mars.mp3" id="marssound"></audio>
+      <audio src="sounds/earth.mp3" id="earthsound"></audio>
+      <audio src="sounds/venus.mp3" id="venussound"></audio>
+      <audio src="sounds/mercury.mp3" id="mercurysound"></audio>
+
+      <div class="planet-names">
+        <button
+          class="planet-name planet-neptune-name"
+          onclick="togglePlayNeptune()"
+          onmouseover="overNeptuneFunction()"
+          onmouseout="outNeptuneFunction()"
+        >
+          neptune
+        </button>
+        <button
+          class="planet-name planet-uranus-name"
+          onclick="togglePlayUranus()"
+          onmouseover="overUranusFunction()"
+          onmouseout="outUranusFunction()"
+        >
+          uranus
+        </button>
+        <button
+          class="planet-name planet-saturn-name"
+          onclick="togglePlaySaturn()"
+          onmouseover="overSaturnFunction()"
+          onmouseout="outSaturnFunction()"
+        >
+          saturn
+        </button>
+        <button
+          class="planet-name planet-jupiter-name"
+          onclick="togglePlayJupiter()"
+          onmouseover="overJupiterFunction()"
+          onmouseout="outJupiterFunction()"
+        >
+          jupiter
+        </button>
+        <button
+          class="planet-name planet-mars-name"
+          onclick="togglePlayMars()"
+          onmouseover="overMarsFunction()"
+          onmouseout="outMarsFunction()"
+        >
+          mars
+        </button>
+        <button
+          class="planet-name planet-earth-name"
+          onclick="togglePlayEarth()"
+          onmouseover="overEarthFunction()"
+          onmouseout="outEarthFunction()"
+        >
+          earth
+        </button>
+        <button
+          class="planet-name planet-venus-name"
+          onclick="togglePlayVenus()"
+          onmouseover="overVenusFunction()"
+          onmouseout="outVenusFunction()"
+        >
+          venus
+        </button>
+        <button
+          class="planet-name planet-mercury-name"
+          onclick="togglePlayMercury()"
+          onmouseover="overMercuryFunction()"
+          onmouseout="outMercuryFunction()"
+        >
+          mercury
+        </button>
+      </div>
+    </div>
+
+    <!-- SOLAR_SYSTEM -->
+    <div class="solar-system">
+      <div class="ring ring-neptun">
+        <div class="planet planet-neptun"></div>
+      </div>
+
+      <div class="ring ring-uranus">
+        <div class="planet planet-uranus"></div>
+      </div>
+
+      <div class="ring ring-saturn">
+        <div class="planet planet-saturn"></div>
+      </div>
+
+      <div class="ring ring-jupiter">
+        <div class="planet planet-jupiter"></div>
+      </div>
+
+      <div class="ring ring-mars"><div class="planet planet-mars"></div></div>
+
+      <div class="ring ring-earth"><div class="planet planet-earth"></div></div>
+
+      <div class="ring ring-venus"><div class="planet planet-venus"></div></div>
+
+      <div class="ring ring-mercury">
+        <div class="planet planet-mercury"></div>
+      </div>
+
+      <audio src="sounds/sun.mp3" id="sunsound"></audio>
+      <div class="sun" id="sunbtn"></div>
+    </div>
+
+    <!-- facts-about-planet -->
+    <div class="facts-about-planet">
+      <div class="about about-neptune">
+        <p class="title">neptune ♆</p>
+        <p class="subtitle">the windiest world</p>
+        <p class="parameter">Ice giant</p>
+        <p class="parameter-info">
+          Most of its mass is a hot, dense fluid of "icy" materials – water,
+          methane and ammonia.
+        </p>
+        <p class="parameter">Short day, long year</p>
+        <p class="parameter-info">
+          Neptune takes about 16 hr to rotate once, and about 165 Earth years to
+          orbit the sun.
+        </p>
+        <p class="parameter">Eighth wanderer</p>
+        <p class="parameter-info">
+          Neptune is the eighth planet from the Sun at a distance of about 2.8B
+          mi.
+        </p>
+        <p class="parameter">Moons</p>
+        <p class="parameter-info">
+          Neptune has 14 known moons which are named after sea gods and nymphs
+          in Greek mythology.
+        </p>
+        <p class="parameter">Faint rings</p>
+        <p class="parameter-info">
+          Neptune has at least five main rings and four more ring arcs.
+        </p>
+        <p class="parameter">Lifeless</p>
+        <p class="parameter-info">Neptune cannot support life as we know it.</p>
+      </div>
+
+      <div class="about about-uranus">
+        <p class="title">uranus ⛢</p>
+        <p class="subtitle">the sideways planet</p>
+        <p class="parameter">Ice giant</p>
+        <p class="parameter-info">
+          Most of its mass is a hot, dense fluid of "icy" materials – water,
+          methane and ammonia.
+        </p>
+        <p class="parameter">Short-ish day, longish year</p>
+        <p class="parameter-info">
+          Uranus takes about 17 hr to rotate once, and about 84 Earth years to
+          complete an orbit of the Sun.
+        </p>
+        <p class="parameter">Seventh wanderer</p>
+        <p class="parameter-info">
+          Uranus is the seventh planet from the Sun at a distance of about 1.8B
+          mi.
+        </p>
+        <p class="parameter">Moons</p>
+        <p class="parameter-info">
+          Uranus has 27 known moons, they are named after characters from the
+          works of W.Shakespeare and A.Pope.
+        </p>
+        <p class="parameter">The other ringed world</p>
+        <p class="parameter-info">
+          Uranus has 13 known rings. The inner rings are narrow and dark and the
+          outer rings are brightly colored.
+        </p>
+        <p class="parameter">Lifeless</p>
+        <p class="parameter-info">Uranus cannot support life.</p>
+      </div>
+
+      <div class="about about-saturn">
+        <p class="title">saturn ♄</p>
+        <p class="subtitle">jewel of our solar system</p>
+        <p class="parameter">Gas giant</p>
+        <p class="parameter-info">
+          Saturn is a gas-giant planet and therefore doesn't have a solid
+          surface like Earth’s.
+        </p>
+        <p class="parameter">Short day, long year</p>
+        <p class="parameter-info">
+          Saturn takes about 10.7 hr to rotate on its axis once, and 29 Earth
+          years to orbit the sun.
+        </p>
+        <p class="parameter">In dim light</p>
+        <p class="parameter-info">
+          Saturn is the sixth planet from the Sun at a distance of about 886M
+          mi.
+        </p>
+        <p class="parameter">Moons</p>
+        <p class="parameter-info">Saturn has 82 moons.</p>
+        <p class="parameter">Glorious rings</p>
+        <p class="parameter-info">
+          Saturn has the most spectacular ring system, with seven rings and
+          several gaps and divisions between them.
+        </p>
+        <p class="parameter">Lifeless</p>
+        <p class="parameter-info">
+          Saturn can't support life, but some of Saturn's moons have conditions
+          that might support life.
+        </p>
+      </div>
+
+      <div class="about about-jupiter">
+        <p class="title">jupiter ♃</p>
+        <p class="subtitle">
+          twice as massive as all the other planets combined
+        </p>
+        <p class="parameter">What's inside</p>
+        <p class="parameter-info">
+          Jupiter is a gas giant and so lacks an Earth-like surface.
+        </p>
+        <p class="parameter">Short day/long year</p>
+        <p class="parameter-info">
+          Jupiter rotates once about every 10 hr, but takes about 12 Earth years
+          to complete one orbit of the Sun.
+        </p>
+        <p class="parameter">Fifth planet from our star</p>
+        <p class="parameter-info">Jupiter orbits about 484M mi from our Sun.</p>
+        <p class="parameter">Moons</p>
+        <p class="parameter-info">Jupiter has more than 75 moons.</p>
+        <p class="parameter">Ringed world</p>
+        <p class="parameter-info">
+          In 1979 the Voyager mission discovered Jupiter’s faint ring system.
+        </p>
+        <p class="parameter">Lifeless</p>
+        <p class="parameter-info">
+          Jupiter cannot support life. But some of Jupiter's moons have oceans
+          beneath their crusts that might support life.
+        </p>
+      </div>
+
+      <div class="about about-mars">
+        <p class="title">mars ♂</p>
+        <p class="subtitle">the red planet</p>
+        <p class="parameter">Rugged terrain</p>
+        <p class="parameter-info">
+          Mars is a rocky planet. Its solid surface has been altered by
+          volcanoes, impacts, winds, crustal movement and chemical reactions.
+        </p>
+        <p class="parameter">Longer days</p>
+        <p class="parameter-info">
+          One day on Mars takes a little over 24 hr. Mars makes a complete orbit
+          around the Sun in 687 Earth days.
+        </p>
+        <p class="parameter">Fourth rock</p>
+        <p class="parameter-info">
+          Mars is the fourth planet from the Sun at a distance of about 142M mi.
+        </p>
+        <p class="parameter">Moons</p>
+        <p class="parameter-info">
+          Mars has two moons named Phobos and Deimos.
+        </p>
+        <p class="parameter">Ringless</p>
+        <p class="parameter-info">There are no rings around Mars.</p>
+        <p class="parameter">Lifeless</p>
+        <p class="parameter-info">
+          At this time, Mars' surface cannot support life. Current missions are
+          determining Mars' past and future potential for life.
+        </p>
+      </div>
+
+      <div class="about about-earth">
+        <p class="title">earth ⊕</p>
+        <p class="subtitle">our home planet</p>
+        <p class="parameter">We're on it</p>
+        <p class="parameter-info">
+          Earth is a rocky planet with a solid and dynamic surface of mountains,
+          canyons, plains and more.
+        </p>
+        <p class="parameter">As the world turns</p>
+        <p class="parameter-info">
+          A day on Earth is 24 hr. Earth makes a complete orbit around the sun
+          in about 365 days.
+        </p>
+        <p class="parameter">Third rock</p>
+        <p class="parameter-info">
+          Earth is the third planet from the Sun at a distance of about 93M mi.
+        </p>
+        <p class="parameter">Moons</p>
+        <p class="parameter-info">Earth has one moon.</p>
+        <p class="parameter">Ringless</p>
+        <p class="parameter-info">Earth has no rings.</p>
+        <p class="parameter">Home, sweet home</p>
+        <p class="parameter-info">Earth is the perfect place for life.</p>
+      </div>
+
+      <div class="about about-venus">
+        <p class="title">venus ♀</p>
+        <p class="subtitle">planetary hot spot</p>
+        <p class="parameter">Diverse terrain</p>
+        <p class="parameter-info">
+          Venus' solid surface is a volcanic landscape covered with extensive
+          plains featuring high volcanic mountains and vast ridged plateaus.
+        </p>
+        <p class="parameter">A day longer than a year</p>
+        <p class="parameter-info">One day on Venus lasts 243 Earth days.</p>
+        <p class="parameter">Second rock</p>
+        <p class="parameter-info">
+          Venus is the second closest planet to the sun at a distance of about
+          67M mi.
+        </p>
+        <p class="parameter">Moonless and ringless</p>
+        <p class="parameter-info">Venus has no moons and no rings.</p>
+        <p class="parameter">Greenhouse effect</p>
+        <p class="parameter-info">
+          The planet’s surface temperature is about 465°C.
+        </p>
+        <p class="parameter">Lifeless</p>
+        <p class="parameter-info">
+          Venus’ extreme temperatures and acidic clouds make it an unlikely
+          place for life.
+        </p>
+      </div>
+
+      <div class="about about-mercury">
+        <p class="title">mercury ☿</p>
+        <p class="subtitle">the swiftest planet</p>
+        <p class="parameter">Rough surface</p>
+        <p class="parameter-info">
+          Mercury is a rocky planet. It has a solid, cratered surface, much like
+          the Earth's moon.
+        </p>
+        <p class="parameter">Long days, short years</p>
+        <p class="parameter-info">
+          One day on Mercury takes 59 Earth days. Mercury makes a complete orbit
+          around the Sun in 88 Earth days.
+        </p>
+        <p class="parameter">Insider</p>
+        <p class="parameter-info">
+          It is the closest planet to the Sun at a distance of about 36M mi.
+        </p>
+        <p class="parameter">Moonless and ringless</p>
+        <p class="parameter-info">Mercury has no moons and no rings.</p>
+        <p class="parameter">Smallest</p>
+        <p class="parameter-info">
+          Mercury is the smallest planet in our solar system.
+        </p>
+        <p class="parameter">Lifeless</p>
+        <p class="parameter-info">
+          It is unlikely life could survive on this planet.
+        </p>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </body>
+</html>
